@@ -1,113 +1,171 @@
 .container__form-container {
-    margin-top: 7rem;
+  /* margin-top: 7rem;
+  display: flex;
+  justify-content: center;
+  height: calc(100vh - 5rem);
 
-    .form-container {
-        margin: 0 auto;
-        max-width: 70%;
-    
-        .form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            color: $fontcolor;
-    
-    
-            .name {
-                @include form-style;
-                
-                label, input {
-                    @include label-input;
-                }
-            }
-    
-            .company {
-                @include form-style;
-    
-                label, input {
-                    @include label-input;
-                }
-            }
-    
-            .email {
-                @include form-style;
-    
-                label, input {
-                    @include label-input;
-                }
-            }
-    
-            .textarea-container {
-                width: 100%;
-    
-                textarea {
-                    color: $fontcolor;
-                    width: 100%;
-                    height: 15rem;
-                    background-color: transparent;
-                    margin-top: 2rem;
-                    resize: none;
-                    border: .1rem solid $fontcolor;
-                    border-radius: .4rem;
-                }
-    
-                ::placeholder {
-                    text-align: center;
-                }
-    
-                textarea:focus {
-                    outline: .2rem solid $focusborder;
-                }
-    
-                textarea:hover {
-                    box-shadow: .08rem .08rem .08rem .08rem $hoverborder;
-                }
-            }
-    
-            input {
-                border: .1rem solid $fontcolor;
-            }
-    
-            input:focus {
-                outline: .2rem solid $focusborder;
-            }
-    
-            input:hover {
-                box-shadow: .08rem .08rem .08rem .08rem $hoverborder;
-            }
-    
-            .btns {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                
-                .btn {
-                    width: 15rem;
-                    margin: 2rem;
-                    padding: .5rem;
-                    border-radius: 1rem;
-                    font-size: 2rem;
-                    font-weight: 700;
-                    border: none;
-                    outline: none;
-                    cursor: pointer;
-                    background-color: rgb(100, 94, 94);
-                }
-    
-                .btn:hover {
-                    border: 1px;
-                    box-shadow: .5rem .5rem .5rem .5rem rgb(37, 35, 35);
-                    transform: translateY(-.2rem);
-                }
-    
-                .btn:active {
-                    border: none;
-                    outline: none;
-                    transform: translateY(.5rem);
-                    box-shadow: none;
-                }
-            }
-            
+  .form-container {
+    //margin: 0 auto;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    .form {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: $fontcolor;
+      height: 100%;
+
+      .name {
+        @include form-style;
+
+        label,
+        input {
+          @include label-input;
         }
-        
+      }
+
+      .company {
+        @include form-style;
+
+        label,
+        input {
+          @include label-input;
+        }
+      }
+
+      .email {
+        @include form-style;
+
+        label,
+        input {
+          @include label-input;
+        }
+      }
+
+      .textarea-container {
+        width: 100%;
+
+        textarea {
+          color: $fontcolor;
+          width: 100%;
+          height: 15rem;
+          background-color: transparent;
+          margin-top: 2rem;
+          resize: none;
+          border: 0.1rem solid $fontcolor;
+          border-radius: 0.4rem;
+        }
+
+        ::placeholder {
+          text-align: center;
+        }
+
+        textarea:focus {
+          outline: 0.2rem solid $focusborder;
+        }
+
+        textarea:hover {
+          box-shadow: 0.08rem 0.08rem 0.08rem 0.08rem $hoverborder;
+        }
+      }
+
+      input {
+        border: 0.1rem solid $fontcolor;
+      }
+
+      input:focus {
+        outline: 0.2rem solid $focusborder;
+      }
+
+      input:hover {
+        box-shadow: 0.08rem 0.08rem 0.08rem 0.08rem $hoverborder;
+      }
+
+      .btns {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .btn {
+          width: 15rem;
+          margin: 2rem;
+          padding: 0.5rem;
+          border-radius: 1rem;
+          font-size: 2rem;
+          font-weight: 700;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          background-color: rgb(100, 94, 94);
+        }
+
+        .btn:hover {
+          border: 1px;
+          box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgb(37, 35, 35);
+          transform: translateY(-0.2rem);
+        }
+
+        .btn:active {
+          border: none;
+          outline: none;
+          transform: translateY(0.5rem);
+          box-shadow: none;
+        }
+      }
     }
+  } */
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+
+  .form-container {
+    height: 100vh;
+    width: 70%;
+    height: calc(100vh - 20rem);
+
+    .form {
+      height: 100%;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-around;
+      align-items: center;
+      .form-elements {
+        width: 100%;
+        color: white;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+        height: 15%;
+        input {
+          width: 100%;
+          height: 50%;
+          font-size: 1rem;
+          background-color: transparent;
+        }
+      }
+
+      .textarea-container {
+        height: 20%;
+
+        textarea {
+          height: 100%;
+        }
+      }
+
+      .btns {
+        height: 10%;
+        flex-flow: row wrap;
+        button {
+          width: 40%;
+          height: 50%;
+        }
+      }
+    }
+  }
 }
