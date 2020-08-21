@@ -120,14 +120,14 @@
       }
     }
   } */
-  margin-top: 10rem;
+  padding-top: 25%;
   display: flex;
   justify-content: center;
+  height: calc(100vh - 7rem);
 
   .form-container {
-    height: 100vh;
+    height: 100%;
     width: 70%;
-    height: calc(100vh - 20rem);
 
     .form {
       height: 100%;
@@ -141,29 +141,53 @@
         display: flex;
         flex-flow: column wrap;
         justify-content: space-around;
-        height: 15%;
+        height: 5rem;
         input {
           width: 100%;
           height: 50%;
-          font-size: 1rem;
           background-color: transparent;
+          font-size: 1.5rem;
+          color: white;
+          padding: 0.2rem;
+        }
+
+        ::placeholder {
+          font-size: 1rem;
+        }
+        input:focus {
+          outline: 0.2rem solid gray;
         }
       }
 
       .textarea-container {
-        height: 20%;
+        height: 8rem;
 
         textarea {
           height: 100%;
+          background-color: transparent;
+          resize: none;
+
+          border-radius: 0.4rem;
+          padding: 0.2rem;
+          color: white;
+        }
+        ::placeholder {
+          font-size: 1rem;
+        }
+        textarea:focus {
+          outline: 0.2rem solid gray;
         }
       }
 
       .btns {
-        height: 10%;
+        height: 5rem;
         flex-flow: row wrap;
         button {
           width: 40%;
           height: 50%;
+          font-size: 1.5rem;
+          background-color: rgb(100, 94, 94);
+          border-radius: 10px;
         }
       }
     }
