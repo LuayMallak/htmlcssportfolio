@@ -367,14 +367,14 @@ main .aboutme-container .about-me {
       }
     }
   } */
-  margin-top: 10rem;
+  padding-top: 25%;
   display: flex;
   justify-content: center;
+  height: calc(100vh - 7rem);
 }
 .container__form-container .form-container {
-  height: 100vh;
+  height: 100%;
   width: 70%;
-  height: calc(100vh - 20rem);
 }
 .container__form-container .form-container .form {
   height: 100%;
@@ -389,27 +389,49 @@ main .aboutme-container .about-me {
   display: flex;
   flex-flow: column wrap;
   justify-content: space-around;
-  height: 15%;
+  height: 5rem;
 }
 .container__form-container .form-container .form .form-elements input {
   width: 100%;
   height: 50%;
-  font-size: 1rem;
   background-color: transparent;
+  font-size: 1.5rem;
+  color: white;
+  padding: 0.2rem;
+}
+.container__form-container .form-container .form .form-elements ::placeholder {
+  font-size: 1rem;
+}
+.container__form-container .form-container .form .form-elements input:focus {
+  outline: 0.2rem solid gray;
 }
 .container__form-container .form-container .form .textarea-container {
-  height: 20%;
+  height: 8rem;
 }
 .container__form-container .form-container .form .textarea-container textarea {
   height: 100%;
+  background-color: transparent;
+  resize: none;
+  border-radius: 0.4rem;
+  padding: 0.2rem;
+  color: white;
+}
+.container__form-container .form-container .form .textarea-container ::placeholder {
+  font-size: 1rem;
+}
+.container__form-container .form-container .form .textarea-container textarea:focus {
+  outline: 0.2rem solid gray;
 }
 .container__form-container .form-container .form .btns {
-  height: 10%;
+  height: 5rem;
   flex-flow: row wrap;
 }
 .container__form-container .form-container .form .btns button {
   width: 40%;
   height: 50%;
+  font-size: 1.5rem;
+  background-color: #645e5e;
+  border-radius: 10px;
 }
 
 @media (min-width: 481px) {
@@ -458,6 +480,34 @@ main .aboutme-container .about-me {
     margin-top: 10rem;
     width: 90%;
   }
+  main .container__form-container {
+    padding-top: 5rem;
+    height: calc(100vh - 5rem);
+  }
+  main .container__form-container .form-container {
+    width: 90%;
+  }
+  main .container__form-container .form-container .form {
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+  main .container__form-container .form-container .form .form-elements {
+    width: 45%;
+    flex-flow: row nowrap;
+  }
+  main .container__form-container .form-container .form .form-elements label {
+    width: 40%;
+    font-size: 1.2rem;
+  }
+  main .container__form-container .form-container .form .form-elements input {
+    width: 60%;
+  }
+  main .container__form-container .form-container .form .textarea-container {
+    width: 95%;
+  }
+  main .container__form-container .form-container .form .textarea-container textarea {
+    width: 100%;
+  }
 }
 @media (min-width: 768px) {
   header .home {
@@ -495,19 +545,37 @@ main .aboutme-container .about-me {
     max-width: 40%;
   }
 
-  .form-container {
-    max-width: 60%;
+  .container__form-container {
+    padding-top: 5rem;
+    height: calc(100vh - 5rem);
   }
-  .form-container .form .btns .btn:hover {
-    border: 1px;
-    box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem #252323;
-    transform: translateY(-0.2rem);
+  .container__form-container .form-container {
+    width: 90%;
+    display: flex;
+    justify-content: center;
   }
-  .form-container .form .btns .btn:active {
-    border: none;
-    outline: none;
-    transform: translateY(0.5rem);
-    box-shadow: none;
+  .container__form-container .form-container .form {
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    width: 70%;
+  }
+  .container__form-container .form-container .form .form-elements {
+    width: 45%;
+    flex-flow: row nowrap;
+  }
+  .container__form-container .form-container .form .form-elements label {
+    width: 40%;
+    font-size: 1.2rem;
+  }
+  .container__form-container .form-container .form .form-elements input {
+    width: 60%;
+  }
+  .container__form-container .form-container .form .textarea-container {
+    height: 20%;
+    width: 95%;
+  }
+  .container__form-container .form-container .form .textarea-container textarea {
+    width: 100%;
   }
 }
 @media (min-width: 992px) {
@@ -516,7 +584,7 @@ main .aboutme-container .about-me {
   }
   body header .nav {
     display: flex;
-    width: 50%;
+    width: 30%;
   }
   body header .nav__list {
     width: 100%;
@@ -554,6 +622,7 @@ body header .nav__list :visited {
     width: 40%;
     top: 15%;
     left: 50%;
+    font-size: 3.5rem;
   }
   body .cropped p span {
     display: block;
@@ -566,30 +635,11 @@ body header .nav__list :visited {
     justify-content: center;
   }
   body main .cards-container {
-    height: calc(100vh - 5rem);
+    height: auto;
     background-color: rgba(255, 255, 255, 0.5);
-    flex-flow: row wrap;
-    justify-content: center;
     margin: 0;
-    align-items: flex-start;
     box-shadow: 1rem 2rem 1rem 0.5rem #2c0202;
     width: 80%;
-  }
-  body main .cards-container .card {
-    flex-flow: row wrap;
-    margin: 2rem;
-    flex: 0 0 34rem;
-    max-width: 40rem;
-  }
-  body main .cards-container .card img {
-    max-width: 100%;
-  }
-  body main .cards-container .card .card__body {
-    flex-direction: column;
-    align-items: center;
-  }
-  body main .cards-container .card .card__body p {
-    text-align: center;
   }
   body main .aboutme-container {
     display: flex;
@@ -615,37 +665,29 @@ body header .nav__list :visited {
   body main .container__form-container {
     background-color: rgba(255, 255, 255, 0.5);
     width: 80%;
-    height: calc(100vh - 7rem);
+    height: calc(100vh - 5rem);
     margin: 0 auto;
     box-shadow: 1rem 2rem 1rem 0.5rem #2c0202;
   }
-  body main .container__form-container .form-container .form .name label,
-body main .container__form-container .form-container .form .name input {
+  body main .container__form-container .form-container .form .form-elements label,
+body main .container__form-container .form-container .form .form-elements input {
     color: black;
   }
-  body main .container__form-container .form-container .form .company label,
-body main .container__form-container .form-container .form .company input {
-    color: black;
-  }
-  body main .container__form-container .form-container .form .email label,
-body main .container__form-container .form-container .form .email input {
-    color: black;
-  }
-  body main .container__form-container .form-container .form input {
+  body main .container__form-container .form-container .form .form-elements input {
     border: 0.1rem solid black;
   }
-  body main .container__form-container .form-container .form ::placeholder {
+  body main .container__form-container .form-container .form .form-elements ::placeholder {
     color: black;
     opacity: 0.5;
   }
-  body main .container__form-container .form-container .form input:hover {
+  body main .container__form-container .form-container .form .form-elements input:hover {
     box-shadow: 0.08rem 0.08rem 0.08rem 0.08rem #3a0808;
   }
-  body main .container__form-container .form-container .form input:focus {
-    outline: 0.2rem solid #945151;
+  body main .container__form-container .form-container .form .form-elements input:focus {
+    outline: 0.1px solid black;
   }
   body main .container__form-container .form-container .form .textarea-container {
-    width: 60%;
+    width: 100%;
   }
   body main .container__form-container .form-container .form .textarea-container textarea {
     border: 0.1rem solid black;
@@ -658,21 +700,18 @@ body main .container__form-container .form-container .form .email input {
     box-shadow: 0.08rem 0.08rem 0.08rem 0.08rem #3a0808;
   }
   body main .container__form-container .form-container .form .textarea-container textarea:focus {
-    outline: 0.2rem solid #945151;
-  }
-  body .form-container {
-    max-width: 40%;
+    outline: 0.1px solid black;
   }
 }
 @media (min-width: 1344px) {
   body main .cards-container {
     max-width: 80%;
   }
+  body main .cards-container .card {
+    width: 30%;
+  }
   body main .aboutme-container .about-me {
     max-width: 30%;
-  }
-  body main .form-container .textarea-container textarea {
-    width: 70%;
   }
 }
 @media (min-width: 1755px) {
